@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard with Admin Feature</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dashboard-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .dashboard-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .submit-btn, .admin-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover, .admin-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .admin-section {
+            margin-top: 20px;
+            display: none;
+            text-align: left;
+        }
+
+        .note {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <form id="dashboardForm">
+            <!-- Name Input -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <!-- Password Input -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <!-- Admin Email Input -->
+            <div class="form-group">
+                <label for="email">Admin Email (Optional):</label>
+                <input type="email" id="email" name="email" placeholder="Enter admin email">
+            </div>
+            <!-- Submit Button -->
+            <button type="button" class="submit-btn" onclick="checkAdmin()">Login</button>
+        </form>
+
+        <!-- Admin Section -->
+        <div class="admin-section" id="adminSection">
+            <h3>Admin Features</h3>
+            <div class="form-group">
+                <label for="newFeature">Add New Feature:</label>
+                <input type="text" id="newFeature" placeholder="Enter new feature">
+            </div>
+            <button class="admin-btn" onclick="addFeature()">Add Feature</button>
+            <ul id="featuresList">
+                <!-- List of added features will appear here -->
+            </ul>
+        </div>
+        <p class="note">Only the admin (admin@gmail.com) can access the additional features.</p>
+    </div>
+
+    <script>
+        // Function to check if the email matches the admin email
+        function checkAdmin() {
+            const email = document.getElementById('email').value;
+            const adminSection = document.getElementById('adminSection');
+
+            if (email === 'admin@gmail.com') {
+                adminSection.style.display = 'block';
+                alert('Welcome Admin! You can now modify features.');
+            } else if (email === '') {
+                adminSection.style.display = 'none';
+                alert('Logged in successfully as a user!');
+            } else {
+                adminSection.style.display = 'none';
+                alert('Access denied! You are not an admin.');
+            }
+        }
+
+        // Function to add new features
+        function addFeature() {
+            const feature = document.getElementById('newFeature').value;
+            const featuresList = document.getElementById('featuresList');
+
+            if (feature) {
+                const listItem = document.createElement('li');
+                listItem.textContent = feature;
+                featuresList.appendChild(listItem);
+                document.getElementById('newFeature').value = '';
+                alert('New feature added!');
+            } else {
+                alert('Please enter a feature to add!');
+            }
+        }
+    </script>
+</body>
+</html>

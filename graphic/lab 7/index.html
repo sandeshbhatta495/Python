@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cards With Rajni KAnt</title>
+     
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2022/07/Oppenheimer-Header.jpg");
+          background-size: cover;
+        }
+        h1 {
+          color: white;
+          font-size: 60px;
+          text-transform: uppercase;
+        }
+        .keyframes-demo {
+          width: 100px;
+          height: 100px;
+          background: #f29ad8;
+          position: relative;
+          animation: mymove 5s infinite;
+        }
+
+        
+         @keyframes mymove {
+          0% { 
+            transform: rotate(360deg);
+            text-replace: auto;
+
+
+            top: 0px;
+          }
+          25% {
+            top: 200px;
+          }
+          75% {
+            top: 50px;
+          }
+          100% {
+            top: 100px;
+          }
+
+        } 
+
+        .container {
+          perspective: -800px;
+        }
+
+        .object {
+          width: 300px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          background-color: #e305ad;
+          transform-style: preserve-3d;
+          animation: rotateAnimation 5s infinite linear;
+        }
+
+        /* @keyframes rotateAnimation {
+          0% {
+            transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(0);
+          }
+          100% {
+            transform: rotateX(360deg) 
+          }
+        } */
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="keyframes-demo">
+          
+            <img src=https://media.istockphoto.com/id/1440592316/vector/king-of-diamonds-playing-card-classic-design.jpg?s=612x612&w=0&k=20&c=oDqEFXm84DSEYkL4BhgxdY5yfLw51o4zkL52YovqZrY= />
+        </div>
+        <!-- <div class="object">
+          <marquee>
+            <h1>HELLO WORLD II</h1>
+          </marquee>
+        </div> -->
+      </div>
+    </body>
+  </html>

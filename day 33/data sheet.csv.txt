@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+ProductID,ProductName,Category,Price,Stock
+1,Apple,Fruits,3,100
+2,Banana,Fruits,1,150
+3,Milk,Dairy,2,50
+4,Bread,Bakery,1.5,30
+5,Eggs,Dairy,0.5,200
+6,Orange,Fruits,2.5,80
+=======
+ProductID,ProductName,Category,Price,Stock
+1,Apple,Fruits,3,100
+2,Banana,Fruits,1,150
+3,Milk,Dairy,2,50
+4,Bread,Bakery,1.5,30
+5,Eggs,Dairy,0.5,200
+6,Orange,Fruits,2.5,80
+>>>>>>> ad12eb181427590f30d26fd51061b42124f2f380

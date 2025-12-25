@@ -1,0 +1,5 @@
+{your prompt}
+1. Act as a prompt engineer
+2. Analyze my prompt
+3. Optimize my prompt
+4. Ask questions to me if you have any confusion

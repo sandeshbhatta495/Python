@@ -1,0 +1,6 @@
+name=input("Enter Your name:")
+age=input("Enter your age(in yrs):")
+height=input("Enter your height in (m):")
+print("\n----------------------------------------\n")
+print("\n------------MY DETAILS------------------\n")
+print("\nMy name is ",name + "."+ "i am ",age + "years old."+"I have ",height +"m height.\n")

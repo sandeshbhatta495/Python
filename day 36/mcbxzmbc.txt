@@ -1,0 +1,8 @@
+important Element for Data  Manipulation 
+- list
+-dictionary
+-
+Relation with number 
+IDE Platform 
+Anoconda 
+

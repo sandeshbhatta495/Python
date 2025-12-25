@@ -1,0 +1,113 @@
+real python.com
+### Basic Plots
+
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+# Generate sample data for demonstrations
+data = np.random.randn(1000)  # Random data for various plots
+## Bar Plots
+"""Bar plots are used to display categorical data with rectangular bars. 
+The length of the bars is proportional to the values they represent. 
+This is ideal for comparing categories."""
+
+# Example of a bar plot
+categories = ['A', 'B', 'C', 'D']
+values = [10, 15, 7, 10]
+plt.bar(categories, values, color='skyblue')
+plt.title('Bar Plot Example')
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.show()
+
+## Histograms
+"""Histograms are used to visualize the distribution of a dataset. 
+They divide the entire range of data into intervals (bins) and count the number of data points in each bin."""
+
+# Example of a histogram
+plt.hist(data, bins=20, color='purple', alpha=0.7)
+plt.title('Histogram Example')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+
+## Box Plots
+"""Box plots (or whisker plots) display the summary of a dataset's distribution, 
+such as its median, quartiles, and potential outliers."""
+
+# Example of a box plot
+plt.boxplot(data, vert=False, patch_artist=True, boxprops=dict(facecolor='lightgreen'))
+plt.title('Box Plot Example')
+plt.xlabel('Value')
+plt.show()
+
+## Area Plots
+"""Area plots are used to represent quantitative data visually. 
+They are similar to line plots but emphasize the area below the line."""
+
+# Example of an area plot
+t = np.arange(0.0, 2.0, 0.01)
+y1 = np.sin(2 * np.pi * t)
+y2 = np.cos(2 * np.pi * t)
+plt.fill_between(t, y1, color='blue', alpha=0.3, label='sin(t)')
+plt.fill_between(t, y2, color='orange', alpha=0.3, label='cos(t)')
+plt.title('Area Plot Example')
+plt.legend()
+plt.show()
+
+## Scatter Plots
+"""Scatter plots display values for two variables for a dataset, 
+helping to show relationships or correlations between them."""
+
+# Example of a scatter plot
+x = np.random.rand(50)
+y = np.random.rand(50)
+sizes = np.random.rand(50) * 100  # Variable sizes for points
+plt.scatter(x, y, s=sizes, c=sizes, cmap='viridis', alpha=0.6, edgecolors='w')
+plt.title('Scatter Plot Example')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.colorbar(label='Size')
+plt.show()
+
+## Hexagonal Bin Plots
+"""Hexbin plots are used to visualize the relationship between two numerical variables. 
+They divide the space into hexagonal bins and count the number of points in each bin."""
+
+# Example of a hexbin plot
+x = np.random.randn(1000)
+y = np.random.randn(1000)
+plt.hexbin(x, y, gridsize=30, cmap='Blues')
+plt.title('Hexagonal Bin Plot Example')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.colorbar(label='Counts')
+plt.show()
+
+## Pie Plots
+"""Pie charts are used to show proportions of categories within a whole.
+They are most effective for showing relative percentages."""
+
+# Example of a pie plot
+sizes = [15, 30, 45, 10]
+labels = ['Category A', 'Category B', 'Category C', 'Category D']
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=['gold', 'lightcoral', 'lightskyblue', 'lightgreen'])
+plt.title('Pie Chart Example')
+plt.show()
+
+## Plotting Tools
+"""Matplotlib is the most commonly used library for creating plots in Python. 
+For interactive and complex visualizations, consider using libraries like Seaborn, Plotly, or Bokeh."""
+
+# Example: Using Seaborn for advanced visualizations
+import seaborn as sns
+
+# Seaborn example: Pairplot
+iris = sns.load_dataset('iris')
+sns.pairplot(iris, hue='species', palette='muted')
+plt.show()
+
+Krish nayak
+"""This notebook provides examples for basic plots. 
+These can be customized further to suit your specific needs."""

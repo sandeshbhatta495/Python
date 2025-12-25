@@ -1,0 +1,27 @@
+🚀 Attended Python with Data Science Workshop  🚀
+
+I had the privilege of participating in an insightful Python with Data Science workshop organized by Tech Axis, where I gained hands-on experience with essential data visualization techniques. This workshop was a great opportunity to deepen my understanding of how to present data effectively using Matplotlib and Seaborn.
+
+Key learnings include:
+
+Bar Plots: Ideal for visualizing categorical comparisons.
+
+Histograms: Understanding data distributions and frequency.
+
+Box Plots: Visualizing data summaries, quartiles, and outliers.
+
+Area Plots: Emphasizing the area beneath the curve to show trends over time.
+
+Scatter Plots: Exploring relationships between two variables.
+
+Hexagonal Bin Plots: Efficiently visualizing large datasets with density patterns.
+
+Pie Charts: Depicting proportions within a whole.
+
+I also explored the power of Seaborn for more advanced and aesthetically pleasing visualizations. This knowledge is invaluable for anyone in the field of data analysis and research.
+
+I’m excited to apply these skills in my future projects, particularly in collaboration with TechAxis and  Research and Innovation Unit , where we focus on cutting-edge research and data-driven solutions. 🌟
+
+Looking forward to continuing this learning journey and contributing to impactful data-driven decision-making! 📊
+
+#DataScience #Python #Matplotlib #Seaborn #DataVisualization #RIUACEM #ResearchAndInnovation #TechAxis #Analytics #ContinuousLearning
